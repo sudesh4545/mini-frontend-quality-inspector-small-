@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Frontend Quality Inspector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./"
+        ><b>FQ</b><span>FRONTEND QUALITY<small>INSPECTOR</small></span></a
+      ><span class="status">● LOCAL AUDIT READY</span>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">QUALITY CONTROL / PROJECT 32</p>
+          <h1>Ship with<br /><em>confidence.</em></h1>
+          <p>
+            Review accessibility, performance, SEO and security in one focused
+            workspace.
+          </p>
+        </div>
+        <div class="score">
+          <strong id="score">0</strong><span>/ 100</span
+          ><small>QUALITY SCORE</small>
+        </div>
+      </section>
+      <section class="toolbar panel">
+        <input id="search" placeholder="Search checks or guidance…" /><select
+          id="category"
+        >
+          <option value="all">All categories</option></select
+        ><select id="priority">
+          <option value="all">All priorities</option>
+          <option>Critical</option>
+          <option>High</option>
+          <option>Normal</option></select
+        ><button id="exportBtn">Export report</button
+        ><button id="resetBtn">Reset</button>
+      </section>
+      <section class="summary">
+        <article><b id="passed">0</b><span>Passed</span></article>
+        <article><b id="failed">0</b><span>Needs work</span></article>
+        <article><b id="remaining">0</b><span>Unchecked</span></article>
+        <article><b id="visible">0</b><span>Visible checks</span></article>
+      </section>
+      <section id="list" class="checks"></section>
+    </main>
+    <style>
+      .profile-footer .social {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #60708e66;
+        border-radius: 11px;
+        color: #dce8ff;
+        text-decoration: none;
+        background: #07101c;
+      }
+      .profile-footer .social:hover {
+        border-color: #22d3ee;
+        color: #22d3ee;
+        transform: translateY(-2px);
+      }
+      .profile-footer .tech {
+        padding: 4px 10px;
+        border: 1px solid #52618155;
+        border-radius: 5px;
+        font: 700 9px ui-monospace;
+        color: #9fb0c9;
+      }
+      .profile-footer a {
+        text-decoration: none;
+      }
+    </style>
+    <footer
+      class="profile-footer"
+      style="
+        display: block;
+        width: min(1200px, 92%);
+        margin: 55px auto 24px;
+        padding: 30px 24px 18px;
+        border: 1px solid #52618145;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          #040915f5,
+          #071522f0 55%,
+          #170a1ded
+        );
+        box-shadow: 0 24px 70px #0008;
+        overflow: hidden;
+        color: #91a0b9;
+      "
+    >
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(280px, 100%), 1fr)
+          );
+          gap: 46px;
+        "
+      >
+        <section>
+          <b style="font: 900 21px ui-monospace; color: #b66cff"
+            ><i style="color: #22d3ee; font-style: normal">[</i>SM<i
+              style="color: #22d3ee; font-style: normal"
+              >]</i
+            ></b
+          >
+          <p style="max-width: 480px; color: #aab8d0; line-height: 1.7">
+            Learning by building — from modern web experiences to strong
+            software-engineering fundamentals.
+          </p>
+          <small
+            style="
+              font: 700 9px ui-monospace;
+              letter-spacing: 0.18em;
+              color: #70829e;
+            "
+            >B.TECH IT STUDENT · FULL STACK DEVELOPER · BUILDER</small
+          >
+          <div style="display: flex; gap: 10px; margin-top: 20px">
+            <a class="social" href="https://github.com/sudesh4545">GH</a
+            ><a class="social" href="https://www.linkedin.com/in/sudeshmehar3/"
+              >in</a
+            ><a class="social" href="mailto:sudeshmehar3@gmail.com">@</a
+            ><a
+              class="social"
+              href="https://sudesh4545.github.io/sudesh-portfolio/"
+              >↗</a
+            >
+          </div>
+        </section>
+        <section>
+          <b
+            style="
+              font: 800 9px ui-monospace;
+              letter-spacing: 0.2em;
+              color: #fff;
+            "
+            >GET IN TOUCH</b
+          ><a
+            href="mailto:sudeshmehar3@gmail.com"
+            style="display: block; margin-top: 20px; color: #9fc6ff"
+            >sudeshmehar3@gmail.com</a
+          >
+          <p>New Delhi, India</p>
+          <p style="color: #c5f9e8">
+            <i
+              style="
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #20e7a8;
+                box-shadow: 0 0 14px #20e7a8;
+                margin-right: 8px;
+              "
+            ></i
+            >Open to internships &amp; collaboration
+          </p>
+          <div style="display: flex; gap: 7px; flex-wrap: wrap">
+            <span class="tech">TypeScript</span><span class="tech">HTML</span
+            ><span class="tech">CSS</span>
+          </div>
+        </section>
+      </div>
+      <div
+        style="
+          margin-top: 28px;
+          padding-top: 17px;
+          border-top: 1px solid #5261812e;
+          color: #65738c;
+          font-size: 10px;
+        "
+      >
+        © 2026 Sudesh Mehar. Built with code, curiosity and creativity.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
